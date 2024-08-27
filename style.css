@@ -23,7 +23,16 @@ header {
   font-weight: 700;
   font-size: 1.8em;
 }
-
+::-webkit-scrollbar{
+  width: 15px;
+  background-color: #0c1844;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #ec3b44;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #cb343c;
+}
 .navigation a {
   color: #fff;
   text-decoration: none;
