@@ -309,12 +309,16 @@ footer {
     font-size: 10px;
   }
   .footer .social-icons {
-    margin-right: 40px;
+    margin-right: auto;
+    margin-left: auto;
     display: flex;
+    flex-direction: row;
+    gap: 20px;
   }
-  .footer .social-icons a {
-    margin-right: 5px;
+  .footer .social-icons a{
+    padding-right: 0px;
   }
-  footer {
+  .back-top {
+    bottom: 5rem;
   }
 }
