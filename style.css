@@ -304,11 +304,17 @@ footer {
     font-size: 1.3em;
   }
 }
-@media (max-width: 300px) {
+@media (max-width: 466px) {
   body {
     font-size: 10px;
   }
-  footer .social-icons {
-    margin-right: 20px;
+  .footer .social-icons {
+    margin-right: 40px;
+    display: flex;
+  }
+  .footer .social-icons a {
+    margin-right: 5px;
+  }
+  footer {
   }
 }
