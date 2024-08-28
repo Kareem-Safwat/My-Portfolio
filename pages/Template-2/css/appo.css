@@ -4,7 +4,7 @@
   --second-color: #f5f6fa;
 }
 /* End variables */
-/* start globel rules */
+/* start global rules */
 * {
   box-sizing: border-box;
   padding: 0;
@@ -43,7 +43,7 @@ ul {
     width: 1170px;
   }
 }
-/* End globel rules */
+/* End global rules */
 .landing-bg {
   background-image: url(../images/Landing.jpg);
   background-repeat: no-repeat;
@@ -127,15 +127,24 @@ header .container .last-header .links .icon span {
   height: 2px;
   width: 100%;
   margin: 4px 0;
-  position: relative;
   z-index: 2;
+}
+@media (max-width:620px) {
+  header .container .last-header button,
+  header .container .last-header .links .icon {
+    display: none;
+  }
+}
+@media (max-width:460px) {
+  header .container nav a {
+    margin-right: 10px;
+  }
 }
 /* end header */
 /* start landing */
 .landing {
   margin-top: 50px;
   height: 70vh;
-  position: relative;
   z-index: 2;
 }
 .landing .container {
@@ -145,6 +154,7 @@ header .container .last-header .links .icon span {
   align-items: center;
   position: relative;
   z-index: 2;
+  height: 100%;
 }
 .landing .container .left-side .text h2 {
   letter-spacing: 3px;
@@ -165,6 +175,27 @@ header .container .last-header .links .icon span {
   top: 10px;
   z-index: 1;
 }
+@media (max-width:1200px) {
+.landing .right-side img {
+  right: 0px;
+  top: 0;
+}
+}
+@media (max-width:910px) {
+.landing .right-side img {
+  display: none;
+}
+.landing .container .left-side .text p {
+  margin-top: 50px;
+}
+.landing .container .left-side .text p, h2{
+  text-align: center;
+}
+.landing .container .left-side .buttones button{
+  margin-left: 70px;
+}
+}
+
 .landing .container .left-side .buttones button.first-btn {
   background-color: var(--main-color);
   border: solid 3px #000;
@@ -175,6 +206,7 @@ header .container .last-header .links .icon span {
   color: #000;
   cursor: pointer;
   margin-right: 30px;
+  margin-bottom: 30px;
   border: none;
 }
 .landing .container .left-side .buttones button.second-btn {
@@ -210,10 +242,9 @@ header .container .last-header .links .icon span {
   border: none;
 }
 .features .section-one .container .cards {
-  display: flex;
+  display: grid;
   gap: 50px;
-  align-items: center;
-  justify-content: space-between;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));;
 }
 .features .section-one .container .card {
   box-shadow: 5px 5px 20px #747474;
@@ -237,6 +268,8 @@ header .container .last-header .links .icon span {
 /* Start Section two */
 .features .section-two .container-one {
   background-color: var(--second-color);
+  display: flex;
+  flex-wrap: wrap;
 }
 .features .section-two .container-one {
   margin: 0;
@@ -247,6 +280,7 @@ header .container .last-header .links .icon span {
 }
 .features .section-two .container-one figure img {
   margin-right: 150px;
+  width: 50%;
 }
 .features .section-two .container-one figure figcaption {
   display: flex;
@@ -267,6 +301,37 @@ header .container .last-header .links .icon span {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
+}
+.features .section-two .container-two figure img {
+  width: 50%;
+}
+@media (max-width:1051px) {
+  .features .section-two .container-one figure img,
+  .features .section-two .container-two figure img,
+  .features .section-two .container-three figure img {
+    display: none;
+  }
+  .features .section-two .container-one figure {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .features .section-two .container-two figure,
+  .features .section-two .container-two figure {
+    display: flex;
+    justify-content: center;
+  }
+  .features .section-two .container-two figure p,
+  .features .section-two .container-two figure h3 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .features .section-two .container-two .btn {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+  }
 }
 .features .section-two .container-two figure figcaption {
   display: flex;
@@ -299,8 +364,13 @@ header .container .last-header .links .icon span {
 }
 .features .section-two .container-three .left-side img {
   position: absolute;
-  left: 60px;
+  left: 0;
   top: 160px;
+}
+@media (max-width:1285px) {
+  .features .section-two .container-three .left-side img {
+    display: none;
+  }
 }
 .features .section-two .container-three .right-side ul li {
   display: flex;
@@ -458,6 +528,15 @@ header .container .last-header .links .icon span {
   justify-content: center;
   justify-content: space-between;
 }
+@media (max-width:790px) {
+  .footer .container .left-side {
+    display: none;
+  }
+  .footer .container .right-side {
+    margin: 50px auto 100px;
+    text-align: center;
+  } 
+}
 .footer .container .right-side {
   display: flex;
   flex-direction: column;
@@ -490,8 +569,10 @@ header .container .last-header .links .icon span {
 footer .container {
   height: 60vh;
   display: grid;
-  grid-template-areas: "li li li li li";
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 20px;
   padding-top: 10%;
+  margin-left: 100px;
 }
 footer .container ul {
   display: flex;
@@ -502,11 +583,8 @@ footer .container h5 {
   margin-bottom: 10px;
   font-size: 1em;
 }
-footer .container li {
-  grid-area: "li";
-}
 /* End Footer */
-/* Start cantact */
+/* Start contact */
 .contact .container {
   display: flex;
   flex-direction: column;
@@ -553,8 +631,8 @@ form {
   background-color: var(--main-color);
   box-shadow: 0px 0px 30px var(--main-color);
 }
-/* End cantact */
-/* Start Last bage */
+/* End contact */
+/* Start Last page */
 .last-page {
   background-color: #4e596c;
 }
@@ -572,6 +650,6 @@ form {
   justify-content: space-evenly;
   color: #fff;
 }
-/* End Last bage */
+/* End Last page */
 /*  */
 /*? Finish :) */
