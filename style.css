@@ -33,12 +33,15 @@ header {
 ::-webkit-scrollbar-thumb:hover {
   background-color: #cb343c;
 }
+.navigation {
+  display: flex;
+  gap: 30px;
+}
 .navigation a {
   color: #fff;
   text-decoration: none;
   font-size: 1.1em;
   font-weight: 500;
-  padding-left: 30px;
   transition: 0.7s ease;
 }
 .navigation a:hover {
@@ -101,16 +104,19 @@ section {
   background-color: #0c1844;
   transform: scale(1.1);
 }
+.social-icons {
+  display: flex;
+  gap: 30px;
+}
 .social-icons a {
   color: #fff;
   font-size: 1.7em;
-  padding-right: 30px;
 }
 .title {
   display: flex;
   justify-content: center;
   color: #0c1844;
-  font-size: 2.2em;
+  font-size: 3.2em;
   font-weight: 800;
   margin-bottom: 30px;
 }
@@ -243,7 +249,7 @@ footer {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: #ec3b44;
+  background-color: #ca2128;
   border-radius: 0.5rem;
   padding: 0.5rem;
   text-decoration: none;
