@@ -172,11 +172,27 @@ section {
 .project-card:hover {
   transform: scale(1.1);
 }
+.disabled {
+  cursor: not-allowed;
+}
+.disabled:hover {
+  transform: none;
+}
+.disabled a {
+  cursor: not-allowed;
+}
+.disabled a:hover {
+  color: #ec3b44;
+}
+.disabled img {
+  filter: blur(2px);
+}
 .project-card:hover .project-img {
   opacity: 0.9;
 }
 .project-img img {
   width: 100%;
+  border-radius: 6px;
 }
 .project-info {
   padding: 1em;
