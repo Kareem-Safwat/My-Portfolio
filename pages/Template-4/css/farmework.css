@@ -10,6 +10,9 @@
 .d-flex {
   display: flex;
 }
+.f-wrap {
+  flex-wrap: wrap;
+}
 .align-center {
   align-items: center;
 }
@@ -59,7 +62,10 @@
 .mt-20 {
   margin-top: 20px;
 }
-mb-20 {
+.mb-10 {
+  margin-bottom: 10px;
+}
+.mb-20 {
   margin-bottom: 20px;
 }
 .w-full {
@@ -79,11 +85,32 @@ mb-20 {
 .bg-blue {
   background-color: var(--blue-color);
 }
+.bg-orange {
+  background-color: var(--orange-color);
+}
+.bg-green {
+  background-color: var(--green-color);
+}
 .c-black {
   color: #000;
 }
 .c-grey {
   color: var(--grey-color);
+}
+.c-wight {
+  color: #fff;
+}
+.c-blue {
+  color: var(--blue-color);
+}
+.c-orange {
+  color: var(--orange-color);
+}
+.c-green {
+  color: var(--green-color);
+}
+.c-red {
+  color: var(--red-color);
 }
 /*? End Color */
 /*? Start Position */
@@ -95,8 +122,20 @@ mb-20 {
 .txt-c {
   text-align: center;
 }
+.fs-13 {
+  font-size: 13px;
+}
 .fs-14 {
   font-size: 14px;
+}
+.fs-15 {
+  font-size: 15px;
+}
+.fs-25 {
+  font-size: 25px;
+}
+.fw-bold {
+  font-weight: bold;
 }
 @media (max-width: 767px) {
   .txt-c-mobile {
@@ -105,7 +144,10 @@ mb-20 {
 }
 /*? End Font */
 /*? Start Border */
-.red-6 {
+.b-none {
+  border: none;
+}
+.rad-6 {
   border-radius: 6px;
 }
 .rad-10 {
@@ -118,4 +160,20 @@ mb-20 {
   align-items: center;
   justify-content: space-between;
 }
+.center-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-shape {
+  padding: 4px 10px;
+  border-radius: 6px;
+}
 /*? End Components */
+/*? Start Animation */
+@keyframes pouncing {
+  50% {
+    bottom: 20px;
+  }
+}
+/*? End Animation */
