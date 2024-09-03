@@ -72,7 +72,13 @@ section {
   font-size: 1.4em;
   font-weight: 500;
 }
-.main h2 span {
+.main h2 span.name {
+  color: #0c1844;
+  font-weight: bold;
+  font-family: "Playwrite CU", cursive;
+  font-size: 1.6em  ;
+}
+.main h2 span.job {
   display: inline-block;
   margin-top: 10px;
   color: #0c1844;
@@ -111,6 +117,7 @@ section {
 .social-icons a {
   color: #fff;
   font-size: 1.7em;
+  transition: 0.7s ease;
 }
 .title {
   display: flex;
@@ -251,12 +258,11 @@ footer {
 .footer .social-icons a {
   font-size: 1.3em;
   padding-right: 0 12px 0 0;
+  transition: 0.5s ease;
 }
 .social-icons a:hover {
   color: #0c1844;
-}
-.social-icons a {
-  transition: 0.5s ease;
+  transform: translateY(-5px);
 }
 .back-top {
   position: fixed;
