@@ -115,9 +115,14 @@ ul {
 .content {
   overflow: hidden;
 }
-.head .search::before {
-  font-family: var(--fa-style-family-classic);
-  content: "\f002";
+@media (max-width: 355px) {
+  .head {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+}
+.head .search i {
   font-weight: 900;
   position: absolute;
   left: 15px;
@@ -125,6 +130,7 @@ ul {
   transform: translateY(-50%);
   color: var(--grey-color);
   font-size: 14px;
+  cursor: pointer;
 }
 .head .search input {
   border: 1px solid #ccc;
@@ -144,20 +150,27 @@ ul {
 .head .search input:focus::placeholder {
   opacity: 0;
 }
+.head .icons {
+  display: flex;
+  gap: 30px;
+}
+.head .icons .notification a {
+  color: #000;
+}
 .head .icons .notification::before {
   content: "";
   position: absolute;
-  width: 10px;
-  height: 10px;
-  background-color: var(--red-color);
+  width: 5px;
+  height: 5px;
+  background-color: #fff;
+  border: 5px var(--red-color) solid;
   border-radius: 50%;
-  right: -5px;
-  top: -5px;
+  right: -4px;
+  top: -3px;
 }
 .head .icons img {
   width: 32px;
   height: 32px;
-  margin-left: 15px;
 }
 .page h1 {
   margin: 20px 20px 40px;
@@ -222,7 +235,7 @@ ul {
 .welcome .visit {
   margin: 0 15px 15px auto;
   transition: 0.3s;
-} 
+}
 .welcome .visit:hover {
   background-color: var(--blue-alt-color);
 }
@@ -239,6 +252,19 @@ ul {
 }
 /*? End Welcome Widget */
 /*? Start Quick Draft */
+.quick-draft input::placeholder,
+.quick-draft textarea::placeholder {
+  opacity: 1;
+  transition: 0.3s;
+}
+.quick-draft input:focus::placeholder,
+.quick-draft textarea:focus::placeholder {
+  opacity: 0;
+}
+.quick-draft input,
+.quick-draft textarea {
+  caret-color: var(--blue-color);
+}
 .quick-draft textarea {
   resize: none;
   min-height: 180px;
@@ -279,6 +305,7 @@ ul {
   border-radius: 6px;
   font-size: 13px;
   animation: pouncing infinite 1s;
+  cursor: default;
 }
 .targets .details .progress > span span::after {
   content: "";
@@ -316,8 +343,21 @@ ul {
 .tickets .box {
   border: 1px solid #ccc;
   width: calc(50% - 10px);
+  transition: 0.5s;
 }
-@media (max-width:767px) {
+.tickets .o-box:hover {
+  border: 1px solid var(--orange-color);
+}
+.tickets .b-box:hover {
+  border: 1px solid var(--blue-color);
+}
+.tickets .g-box:hover {
+  border: 1px solid var(--green-color);
+}
+.tickets .r-box:hover {
+  border: 1px solid var(--red-color);
+}
+@media (max-width: 767px) {
   .tickets .box {
     width: 100%;
   }
@@ -341,7 +381,10 @@ ul {
   margin: 0 0 6px;
   font-size: 16px;
 }
-@media (max-width:767px) {
+.latest-news .news-row .label {
+  cursor: default;
+}
+@media (max-width: 767px) {
   .latest-news .news-row {
     display: block;
   }
@@ -351,3 +394,33 @@ ul {
   }
 }
 /*? End Latest News */
+/*? Start Tasks */
+.tasks .task-row:not(:last-of-type) {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+.tasks .info {
+  flex-grow: 1;
+}
+.tasks .done {
+  opacity: 0.3;
+}
+.tasks .done h3,
+.tasks .done p {
+  text-decoration: line-through;
+}
+.tasks .delete {
+  cursor: pointer;
+  transition: 0.3s;
+}
+.tasks .delete:hover {
+  color: var(--red-color);
+  transform: scale(1.1);
+}
+.tasks .done .delete:hover {
+  color: initial;
+  transform: scale(1);
+  cursor: default;
+}
+/*? End Tasks */

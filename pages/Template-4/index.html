@@ -104,17 +104,27 @@
           </li>
         </ul>
       </div>
+      <!--? Start Content -->
       <div class="content w-full">
-        <!--? Start Content -->
         <div class="head bg-wight p-15 between-flex">
           <div class="search p-relative">
-            <input class="p-10" type="search" placeholder="Type A Keyword..." />
+            <label for="s-icon"
+              ><i class="fa-solid fa-magnifying-glass"></i
+            ></label>
+            <input
+              id="s-icon"
+              class="p-10"
+              type="search"
+              placeholder="Type A Keyword..."
+            />
           </div>
           <div class="icons d-flex align-center">
             <span class="notification p-relative">
-              <i class="fa-regular fa-bell fa-lg"></i>
+              <a href="pages/notification.html"
+                ><i class="fa-regular fa-bell fa-lg"></i
+              ></a>
             </span>
-            <img src="imgs/avatar.png" alt="" />
+            <a href="pages/profile.html"><img src="imgs/avatar.png" alt="" /></a>
           </div>
         </div>
         <!--? End Content -->
@@ -144,7 +154,7 @@
               </div>
             </div>
             <a
-              href="profile.html"
+              href="pages/profile.html"
               class="visit d-block fs-14 bg-blue c-wight w-fit btn-shape"
               >Profile</a
             >
@@ -233,24 +243,24 @@
               Everything About Support Tickets
             </p>
             <div class="d-flex txt-c gap-20 f-wrap">
-              <div class="box p-20 rad-10 fs-13 c-grey">
+              <div class="box p-20 rad-10 fs-13 c-grey o-box">
                 <i
                   class="fa-regular fa-rectangle-list fa-2x mb-10 c-orange"
                 ></i>
                 <span class="d-block c-black fw-bold fs-25 mb-5">2500</span>
                 Total
               </div>
-              <div class="box p-20 rad-10 fs-13 c-grey">
+              <div class="box p-20 rad-10 fs-13 c-grey b-box">
                 <i class="fa-solid fa-spinner fa-2x mb-10 c-blue"></i>
                 <span class="d-block c-black fw-bold fs-25 mb-5">500</span>
                 Pending
               </div>
-              <div class="box p-20 rad-10 fs-13 c-grey">
+              <div class="box p-20 rad-10 fs-13 c-grey g-box">
                 <i class="fa-regular fa-circle-check fa-2x mb-10 c-green"></i>
                 <span class="d-block c-black fw-bold fs-25 mb-5">1900</span>
                 Closed
               </div>
-              <div class="box p-20 rad-10 fs-13 c-grey">
+              <div class="box p-20 rad-10 fs-13 c-grey r-box">
                 <i class="fa-regular fa-rectangle-xmark fa-2x mb-10 c-red"></i>
                 <span class="d-block c-black fw-bold fs-25 mb-5">100</span>
                 Deleted
@@ -259,18 +269,20 @@
           </div>
           <!--? End Ticket -->
           <!--? Start Latest News -->
-          <div class="latest-news  p-20 bg-wight rad-10 txt-c-mobile">
-            <h2 class="mt-0 mb-20">Latest News</h2>
+          <div class="latest-news p-20 bg-wight rad-10 txt-c-mobile">
+            <h2 class="txt-c-mobile mt-0 mb-20">Latest News</h2>
             <div class="news-row d-flex align-center">
-              <img src="imgs/news-01.png" alt="">
+              <img src="imgs/news-01.png" alt="" />
               <div class="info">
                 <h3>Created SASS Section</h3>
-                <p class="m-0 fs-14 c-grey">New SASS Examples &amp; Tutorials</p>
+                <p class="m-0 fs-14 c-grey">
+                  New SASS Examples &amp; Tutorials
+                </p>
               </div>
               <div class="btn-shape bg-eee fs-13 label">3 Days Ago</div>
             </div>
             <div class="news-row d-flex align-center">
-              <img src="imgs/news-02.png" alt="">
+              <img src="imgs/news-02.png" alt="" />
               <div class="info">
                 <h3>Changed The Design</h3>
                 <p class="m-0 fs-14 c-grey">A Brand New Website Design</p>
@@ -278,7 +290,7 @@
               <div class="btn-shape bg-eee fs-13 label">5 Days Ago</div>
             </div>
             <div class="news-row d-flex align-center">
-              <img src="imgs/news-03.png" alt="">
+              <img src="imgs/news-03.png" alt="" />
               <div class="info">
                 <h3>Team Increased</h3>
                 <p class="m-0 fs-14 c-grey">3 Developers Joined The Team</p>
@@ -286,7 +298,7 @@
               <div class="btn-shape bg-eee fs-13 label">7 Days Ago</div>
             </div>
             <div class="news-row d-flex align-center">
-              <img src="imgs/news-04.png" alt="">
+              <img src="imgs/news-04.png" alt="" />
               <div class="info">
                 <h3>Added Payment Gateway</h3>
                 <p class="m-0 fs-14 c-grey">Many New Payment Gateways Added</p>
@@ -295,6 +307,50 @@
             </div>
           </div>
           <!--? End Latest News -->
+          <!--? Start Tasks -->
+          <div class="tasks p-20 bg-wight rad-10">
+            <h2 class="txt-c-mobile mt-0 mb-20">Latest Tasks</h2>
+            <div class="task-row between-flex">
+              <div class="info">
+                <h3 class="mt-0 mb-5 fs-15">Record One New Video</h3>
+                <p class="m-0 c-grey">Record Python Create Exe Project</p>
+              </div>
+              <i class="fa-solid fa-trash-can delete"></i>
+            </div>
+            <div class="task-row between-flex">
+              <div class="info">
+                <h3 class="mt-0 mb-5 fs-15">Write Article</h3>
+                <p class="m-0 c-grey">
+                  Write Low Level vs High Level Languages
+                </p>
+              </div>
+              <i class="fa-solid fa-trash-can delete"></i>
+            </div>
+            <div class="task-row between-flex">
+              <div class="info">
+                <h3 class="mt-0 mb-5 fs-15">Finish Project</h3>
+                <p class="m-0 c-grey">Publish Academy Programming Project</p>
+              </div>
+              <i class="fa-solid fa-trash-can delete"></i>
+            </div>
+            <div class="task-row between-flex done">
+              <div class="info">
+                <h3 class="mt-0 mb-5 fs-15">Attend The Meeting</h3>
+                <p class="m-0 c-grey">
+                  Attend The Project Business Analysis Meeting
+                </p>
+              </div>
+              <i class="fa-solid fa-trash-can delete"></i>
+            </div>
+            <div class="task-row between-flex">
+              <div class="info">
+                <h3 class="mt-0 mb-5 fs-15">Finish Lesson</h3>
+                <p class="m-0 c-grey">Finish Teaching Flex Box</p>
+              </div>
+              <i class="fa-solid fa-trash-can delete"></i>
+            </div>
+          </div>
+          <!--? End Tasks -->
         </div>
       </div>
     </div>

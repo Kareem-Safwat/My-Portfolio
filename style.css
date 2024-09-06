@@ -75,7 +75,6 @@ section {
 .main h2 span.name {
   color: #0c1844;
   font-weight: bold;
-  font-family: "Playwrite CU", cursive;
   font-size: 1.6em  ;
 }
 .main h2 span.job {
@@ -117,7 +116,7 @@ section {
 .social-icons a {
   color: #fff;
   font-size: 1.7em;
-  transition: 0.7s ease;
+  transition: 0.5s ease;
 }
 .title {
   display: flex;
