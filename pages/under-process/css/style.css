@@ -14,6 +14,23 @@ h1 {
 img {
   margin-bottom: 30px;
 }
+a {
+  text-decoration: none;
+  background-color: #438ab8;
+  border-radius: 15px;
+  font-size: 1.1em;
+  font-weight: 600;
+  display: inline-block;
+  color: #fff;
+  padding: 0.9375em 2.1875em;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+  transition: 0.7s ease;
+}
+a:hover {
+  background-color: #0c1844;
+  transform: scale(1.1);
+}
 .footer-title {
   font-size: 1.3em;
   font-weight: 600;
