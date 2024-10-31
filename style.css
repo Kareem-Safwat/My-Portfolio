@@ -174,6 +174,9 @@ section {
   margin: 20px;
   transition: 0.7s ease;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .project-card:hover {
   transform: scale(1.1);
