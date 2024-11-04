@@ -10,7 +10,7 @@ header {
   background-color: #ec3b44;
   width: 100%;
   position: fixed;
-  z-index: 1;
+  z-index: 999;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -23,7 +23,7 @@ header {
   font-weight: 700;
   font-size: 1.8em;
 }
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 15px;
   background-color: #0c1844;
 }
@@ -62,7 +62,7 @@ section {
   background-position: right;
   background-attachment: fixed;
 }
-@media (max-width:977px) {
+@media (max-width: 977px) {
   .main {
     background-image: linear-gradient(to bottom, #ec3b44 60%, #ec3b44);
   }
@@ -75,7 +75,7 @@ section {
 .main h2 span.name {
   color: #0c1844;
   font-weight: bold;
-  font-size: 1.6em  ;
+  font-size: 1.6em;
 }
 .main h2 span.job {
   display: inline-block;
@@ -132,6 +132,9 @@ section {
   flex-direction: row;
   flex-wrap: wrap;
 }
+.cards {
+  position: relative;
+}
 .card {
   background-color: #fff;
   width: 21.25em;
@@ -160,6 +163,19 @@ section {
 }
 .projects {
   background-color: #ec3b44;
+  position: relative;
+  overflow: hidden;
+}
+.projects:after {
+  content: "";
+    width: 100%;
+    height: 100%;
+    right: 0;
+    bottom: -23%;
+    background: #0c1844;
+    position: absolute;
+    clip-path: circle(40% at right 70%);
+    z-index: 2;
 }
 .projects .content {
   margin-top: 30px;
@@ -177,6 +193,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  z-index: 3;
 }
 .project-card:hover {
   transform: scale(1.1);
@@ -283,6 +300,7 @@ footer {
   transition: 0.2s ease-out;
   width: 50px;
   height: 50px;
+  z-index: 9999999;
 }
 .back-top:hover {
   background-color: #cb343c;
@@ -298,8 +316,14 @@ footer {
   .title {
     font-size: 1.8em;
   }
-  section {
-    padding: 80px 20px;
+  section.projects, section.cards {
+    padding: 180px 0px;
+  }
+  .projects:after {
+    width: 100%;
+    height: 60%;
+    clip-path: circle(70% at bottom);
+  
   }
   .main-content h2 {
     font-size: 1em;
@@ -333,6 +357,12 @@ footer {
     height: 35px;
     font-size: 1.3em;
   }
+  .dots {
+    display: none;
+  }
+  section.main {
+    padding: 100px 150px 100px 48px;
+  }
 }
 @media (max-width: 466px) {
   body {
@@ -345,10 +375,27 @@ footer {
     flex-direction: row;
     gap: 20px;
   }
-  .footer .social-icons a{
+  .footer .social-icons a {
     padding-right: 0px;
   }
   .back-top {
     bottom: 5rem;
   }
 }
+/*? Start Framework */
+.dots {
+  background-image: url(images/dots.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 186px;
+  width: 204px;
+}
+.dots-up {
+  top: 0px;
+  right: 0;
+}
+.dots-down {
+  bottom: 20px;
+  left: -68px;
+}
+/*? End Framework */
