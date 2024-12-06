@@ -61,6 +61,7 @@ section {
   background-repeat: no-repeat;
   background-position: right;
   background-attachment: fixed;
+  background-color: #ec3b44;
 }
 @media (max-width: 977px) {
   .main {
