@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital@1&display=swap");
+* {
+  font-family: "ubuntu", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background: linear-gradient(to right, #01022d, #000);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  background-image: linear-gradient(to right, #01022de5 30%, #00000088),
+    url(./assets/images/download.webp);
+  background-repeat: no-repeat;
+  height: 92%;
+  width: 94%;
+  background-size: cover;
+  background-position: center;
+}
+.container:hover {
+  background-image: linear-gradient(to right, #01022de5 30%, transparent),
+    url(./assets/images/download.webp);
+}
+.container nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.container nav .logo {
+  text-decoration: none;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.list {
+  width: 60%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.list a {
+  list-style-type: none;
+}
+.list a {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+.list a:hover {
+  border-bottom-color: #fff;
+}
+.contain {
+  color: #fff;
+  width: 50%;
+  margin-top: 50px;
+  padding: 30px;
+}
+.contain h2 {
+  font-size: 100px;
+  text-transform: uppercase;
+}
+.contain p {
+  letter-spacing: 3px;
+  width: 350px;
+  padding: 20px 0;
+}
+.contain button {
+  padding: 6px;
+  font-size: 30px;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+.contain button:hover {
+  border-color: #fff;
+  color: #fff;
+  background-color: transparent;
+}
+@media (max-width: 767px) {
+  .list {
+    gap: 20px;
+  }
+  .container {
+    background-image: linear-gradient(to bottom, #01022de5 30%, #00000088),
+      url(./assets/images/download.webp);
+  }
+  .container:hover {
+    background-image: linear-gradient(to bottom, #01022de5 30%, transparent),
+      url(./assets/images/download.webp);
+  }
+  .container h2 {
+    font-size: 50px;
+  }
+  nav {
+    flex-direction: column;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+  nav .list {
+    flex-wrap: wrap;
+  }
+}

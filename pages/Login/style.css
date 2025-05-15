@@ -1,0 +1,114 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: sans-serif;
+    background-image: url(./assets/images/img.jpg);
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    background-color: transparent;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    border-radius: 12px;
+    border: 2px solid #ffffff1a;
+    box-shadow: 0 0 20px #00000049;
+    backdrop-filter: blur(20px);
+}
+@media (max-width:375px) {
+    .remember-forgot {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+    .remember-forgot label {
+        padding-left: 60px;
+    }
+}
+.title{
+    margin-bottom: 50px;
+    color: #fff;
+    margin-top: 20px;
+}
+.required{
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid #ffffff3c;
+    border-radius: 25px;
+    height: 30px;
+    width: 90%;
+    padding: 6px;
+    margin: 15px;
+}
+.input{
+    position: relative;
+}
+.input i{
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #fff;
+}
+input::placeholder{
+    color: #fff;
+}
+.remember-forgot{
+    margin: 25px 0px 35px 0px;
+}
+label.remember{
+    color: #fff;
+}
+.remember{
+    margin-right: 70px;
+}
+.check-remember{
+    accent-color: #fff;
+    margin-right: 3px;
+}
+a.forgot, a.register{
+    text-decoration: none;
+    color: #fff;
+}
+a.forgot:hover, a.register:hover{
+    text-decoration: underline;
+}
+div.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    text-align: center;
+    height: 35px;
+    padding: 5px;
+    border-radius: 25px;
+    margin-top: 15px;
+    margin-bottom: 28px;
+    margin-bottom: 35px;
+}
+a.login{
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+}
+p{
+    text-align: center;
+    color: #fff;
+}
+a.register{
+    font-weight: 700;
+}
